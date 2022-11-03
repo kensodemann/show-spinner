@@ -11,19 +11,17 @@
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
       </ion-header>
-    
-      <ExploreContainer name="Tab 1 page" />
+      
+      <ion-spinner v-if="loading"></ion-spinner>
+      <ExploreContainer v-else name="Tab 1 page" />
     </ion-content>
   </ion-page>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+<script setup lang="ts">
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, loadingController, IonSpinner } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
+import useData from '@/composables/data';
 
-export default  defineComponent({
-  name: 'Tab1Page',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
-});
+const { loading } = useData();
 </script>

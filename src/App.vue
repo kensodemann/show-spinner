@@ -4,15 +4,16 @@
   </ion-app>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    IonApp,
-    IonRouterOutlet
-  }
-});
 </script>
+
+<style>
+ion-spinner {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+</style>
