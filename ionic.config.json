@@ -1,0 +1,7 @@
+{
+  "name": "show-spinner",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
